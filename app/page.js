@@ -37,7 +37,7 @@ export default function Home() {
   const projects = [
     {
       name: "Panstr",
-      
+      image:"projects/panstr.png",
       description:
         "Panstr is a web-based forum inspired by Thailand's popular platform, Pantip. It allows users to discuss various topics in a user-friendly interface. Built with Next.js and PostgreSQL, this project aims to eventually integrate the Nostr Protocol, creating a truly decentralized forum experience.",
       link: "",
@@ -50,12 +50,14 @@ export default function Home() {
     },
     {
       name: "E-commerce Showcase",
+      image:"projects/sintara.png",
       description:
         "This project is a Coffee Beans Gallery web application designed to showcase various coffee bean products. The application features a user-friendly interface with a modern design, allowing users to browse through a selection of coffee beans, view details, and interact with a smooth carousel slider.",
       link: "",
     },
     {
       name: "FilmGallery",
+      image:"projects/filmgallery.png",
       description:
         "FilmGallery is a web platform designed to showcase stunning photographs, primarily captured using film cameras. Users can explore and search for images based on the type of film, such as Kodak 200, to view photographs with a specific film aesthetic.",
       link: "",
