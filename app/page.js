@@ -1,77 +1,67 @@
 import Image from "next/image";
-import Experience from "./components/Experiemce";
+import Experience from "./components/Experience";
 import Project from "./components/Project";
+import AboutMe from "./components/AboutMe";
 export default function Home() {
   const workexperiences = [
     {
-      company: "Klaviyo",
-      position: "Senior Front-End Engineer",
-      date: "2021 - Present",
+      company: "Sunnysideup Studio",
+      position: "WordPress Developer",
+      date: "2023 - Present",
       description:
-        "Specializing in accessibility, I contribute to the creation and maintenance of UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.",
+        "As a Web Developer at an agency, my primary role is to create and customize websites tailored to client needs. Most projects involve leveraging the WordPress CMS, where I focus on designing and customizing themes using CSS and occasionally modifying plugins to align with specific requirements. My work emphasizes delivering user-friendly, visually appealing, and functional websites that meet diverse client expectations.",
     },
     {
-      company: "Klaviyo",
-      position: "Front-End Engineer",
-      date: "2019 - 2021",
+      company: "alongdrip coffee",
+      position: "Owner",
+      date: "2021 - 2023",
       description:
-        "Developed and maintained UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.",
+        "During the COVID-19 pandemic, I established a small specialty coffee shop called `Alongdrip Coffee` in Khao Yai, focusing on a slow bar experience. Although it was a small operation, it provided invaluable lessons in business management, from overseeing daily operations and cost control to creating a welcoming customer experience. Additionally, I took the initiative to learn and perform coffee roasting myself, adding a personal touch to the business and deepening my understanding of the craft.",
     },
     {
-      company: "Klaviyo",
-      position: "Front-End Engineer",
-      date: "2019 - 2021",
+      company: "Never Sleep Co.,Ltd.",
+      position: "UX/UI Designer",
+      date: "2020 - 2021",
       description:
-        "Developed and maintained UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.",
+        "As a UX/UI Designer, I focused on creating website designs based on client requirements, utilizing Figma to craft intuitive and visually appealing interfaces. While my role did not involve coding, I ensured that the designs aligned with user needs and project goals. I worked in this role for approximately three months before relocating back to my hometown",
+    },
+    {
+      company: "Husband and Wife Shop",
+      position: "Film Developer & Sales Associate",
+      date: "2018 - 2020",
+      description:
+        "At a specialty film camera shop, I worked as a Film Developer and Sales Associate. My responsibilities included assisting customers with product recommendations, offering advice on film and camera selections, and developing and scanning film rolls brought in by customers. This role allowed me to enhance my skills in time management, prioritizing tasks, and providing excellent customer service within a niche market.",
     },
   ];
 
   const projects = [
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""
-  },
-  {
-    name: "Spotify API Course",
-    description: "Released a comprehensive video course guiding learners through building a web app with the Spotify API.",
-    link: ""}
-]
+    {
+      name: "Panstr",
+      
+      description:
+        "Panstr is a web-based forum inspired by Thailand's popular platform, Pantip. It allows users to discuss various topics in a user-friendly interface. Built with Next.js and PostgreSQL, this project aims to eventually integrate the Nostr Protocol, creating a truly decentralized forum experience.",
+      link: "",
+    },
+    {
+      name: "The Rice PanJa",
+      description:
+        "The Rice PanJa POS system is a web-based platform tailored for The Rice PanJa Restaurant. This system is designed to streamline restaurant operations while accommodating the unique requirements of a restaurant with guest rooms.",
+      link: "",
+    },
+    {
+      name: "E-commerce Showcase",
+      description:
+        "This project is a Coffee Beans Gallery web application designed to showcase various coffee bean products. The application features a user-friendly interface with a modern design, allowing users to browse through a selection of coffee beans, view details, and interact with a smooth carousel slider.",
+      link: "",
+    },
+    {
+      name: "FilmGallery",
+      description:
+        "FilmGallery is a web platform designed to showcase stunning photographs, primarily captured using film cameras. Users can explore and search for images based on the type of film, such as Kodak 200, to view photographs with a specific film aesthetic.",
+      link: "",
+    },
+
+  ];
 
   return (
     <>
@@ -79,41 +69,18 @@ export default function Home() {
         id="about"
         className="ml-48 min-h-screen flex flex-col justify-center"
       >
-        <p className="mt-4">
-          I’m a developer passionate about crafting accessible, pixel-perfect
-          user interfaces that blend thoughtful design with robust engineering.
-          My favorite work lies at the intersection of design and development,
-          creating experiences that not only look great but are meticulously
-          built for performance and usability.{" "}
-        </p>
-        <p className="mt-4">
-          Currently, I'm a Senior Front-End Engineer at Klaviyo, specializing in
-          accessibility. I contribute to the creation and maintenance of UI
-          components that power Klaviyo’s frontend, ensuring our platform meets
-          web accessibility standards and best practices to deliver an inclusive
-          user experience.{" "}
-        </p>
-        <p className="mt-4">
-          In the past, I've had the opportunity to develop software across a
-          variety of settings — from advertising agencies and large corporations
-          to start-ups and small digital product studios. Additionally, I also
-          released a comprehensive video course a few years ago, guiding
-          learners through building a web app with the Spotify API.{" "}
-        </p>
-        <p className="mt-4">
-          In my spare time, I’m usually climbing, reading, hanging out with my
-          wife and two cats, or running around Hyrule searching for Korok seeds
-          K o r o k s e e d s .
-        </p>
+        <AboutMe />
+        
       </section>
 
       <section
         id="experience"
-        className="ml-48 min-h-screen flex flex-col justify-center"
+        className="ml-48 min-h-screen flex flex-col justify-center mb-16"
       >
-        <Experience workexperiences={workexperiences}
-        
-        />
+        <Experience workexperiences={workexperiences} />
+       <div className="mt-8 text-xl font-bold">
+       View Resume
+       </div>
       </section>
 
       <section
@@ -122,7 +89,6 @@ export default function Home() {
       >
         <Project projects={projects} />
       </section>
-
     </>
   );
 }

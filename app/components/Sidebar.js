@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Sidebar() {
   return (
-    <nav className=" h-full bg-base-200 fixed top-0 left-0">
+    <nav className=" h-full bg-base-200 fixed top-0 left-0 w-1/3">
       <div className="flex flex-col justify-between h-full p-4">
         <div>
           {/* profile */}
@@ -9,8 +9,8 @@ export default function Sidebar() {
             <h1 className="text-3xl font-bold">Jiranat Pattanasintara</h1>
             <h4 className="text-xl font-bold">Web Developer</h4>
             <p className="text-l">
-              I build accessible, pixel-perfect digital experiences for the web.
-            </p>
+            Full-time WordPress Developer with experience in front-end and full-stack development currently exploring Next.js. Skilled in time management and prioritizing
+            </p>            
           </div>
 
           {/* menu */}
@@ -74,6 +74,8 @@ export default function Sidebar() {
               </Link>
             </div>
           </div>
+
+          
         </div>
       </div>
     </nav>

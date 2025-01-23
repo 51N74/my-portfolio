@@ -7,7 +7,7 @@ export default function Experience({workexperiences}) {
         >
         {
             workexperiences.map((experience, index) => (
-            <div key={index} className="mt-4">
+            <div key={index} className="mt-8">
                 <h3 className="text-2xl font-bold">{experience.company}</h3>
                 <h4 className="text-xl font-bold">{experience.position}</h4>
                 <p className="text-l">{experience.date}</p>
