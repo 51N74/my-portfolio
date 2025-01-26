@@ -1,101 +1,101 @@
-import Image from "next/image";
+
+import Experience from "./components/Experience";
+import Project from "./components/Project";
+import AboutMe from "./components/AboutMe";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const workexperiences = [
+    {
+      company: "Sunnysideup Studio",
+      position: "WordPress Developer",
+      date: "2023 - Present",
+      description:
+        "As a Web Developer at an agency, my primary role is to create and customize websites tailored to client needs. Most projects involve leveraging the WordPress CMS, where I focus on designing and customizing themes using CSS and occasionally modifying plugins to align with specific requirements. My work emphasizes delivering user-friendly, visually appealing, and functional websites that meet diverse client expectations.",
+    },
+    {
+      company: "alongdrip coffee",
+      position: "Owner",
+      date: "2021 - 2023",
+      description:
+        "During the COVID-19 pandemic, I established a small specialty coffee shop called `Alongdrip Coffee` in Khao Yai, focusing on a slow bar experience. Although it was a small operation, it provided invaluable lessons in business management, from overseeing daily operations and cost control to creating a welcoming customer experience. Additionally, I took the initiative to learn and perform coffee roasting myself, adding a personal touch to the business and deepening my understanding of the craft.",
+    },
+    {
+      company: "Never Sleep Co.,Ltd.",
+      position: "UX/UI Designer",
+      date: "2020 - 2021",
+      description:
+        "As a UX/UI Designer, I focused on creating website designs based on client requirements, utilizing Figma to craft intuitive and visually appealing interfaces. While my role did not involve coding, I ensured that the designs aligned with user needs and project goals. I worked in this role for approximately three months before relocating back to my hometown",
+    },
+    {
+      company: "Husband and Wife Shop",
+      position: "Film Developer & Sales Associate",
+      date: "2018 - 2020",
+      description:
+        "At a specialty film camera shop, I worked as a Film Developer and Sales Associate. My responsibilities included assisting customers with product recommendations, offering advice on film and camera selections, and developing and scanning film rolls brought in by customers. This role allowed me to enhance my skills in time management, prioritizing tasks, and providing excellent customer service within a niche market.",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  const projects = [
+    {
+      name: "Panstr",
+      image:"projects/panstr.png",
+      description:
+        "Panstr is a web-based forum inspired by Thailand's popular platform, Pantip. It allows users to discuss various topics in a user-friendly interface. Built with Next.js and PostgreSQL, this project aims to eventually integrate the Nostr Protocol, creating a truly decentralized forum experience.",
+      link: "",
+    },
+    // {
+    //   name: "The Rice PanJa",
+    //   description:
+    //     "The Rice PanJa POS system is a web-based platform tailored for The Rice PanJa Restaurant. This system is designed to streamline restaurant operations while accommodating the unique requirements of a restaurant with guest rooms.",
+    //   link: "",
+    // },
+    {
+      name: "E-commerce Showcase",
+      image:"projects/sintara.png",
+      description:
+        "This project is a Coffee Beans Gallery web application designed to showcase various coffee bean products. The application features a user-friendly interface with a modern design, allowing users to browse through a selection of coffee beans, view details, and interact with a smooth carousel slider.",
+      link: "",
+    },
+    {
+      name: "FilmGallery",
+      image:"projects/filmgallery.png",
+      description:
+        "FilmGallery is a web platform designed to showcase stunning photographs, primarily captured using film cameras. Users can explore and search for images based on the type of film, such as Kodak 200, to view photographs with a specific film aesthetic.",
+      link: "",
+    },
+
+  ];
+
+  return (
+    <>
+      <section
+        id="about"
+        className="ml-48 min-h-screen flex flex-col justify-center"
+      >
+        <AboutMe />
+        
+      </section>
+
+      <section
+        id="experience"
+        className="ml-48 min-h-screen flex flex-col justify-center mb-16"
+      >
+        <Experience workexperiences={workexperiences} />
+       <div className="mt-8 text-xl font-bold">
+       <Link href="/Resume_P_Jiranat.pdf" passHref>
+        View Resume
+       </Link>
+       </div>
+      </section>
+
+      <section
+        id="projects"
+        className="ml-48 min-h-screen flex flex-col justify-center"
+      >
+        <Project projects={projects} />
+      </section>
+
+    </>
   );
 }
