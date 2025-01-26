@@ -18,20 +18,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <>
     <html lang="en" data-theme="dim">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        
         <div className="flex h-screen">
           {/* Sidebar */}
           <Sidebar />
-
+        
           {/* Main Content */}
-          <main className=" w-full ml-96 flex-1 overflow-auto p-6 bg-base-100">
+          <main className=" w-full ml-96 flex-1 overflow-auto p-6 bg-gradient-to-b from-[#2C3F6D] to-[#182848]">
             {children}
           </main>
         </div>
       </body>
     </html>
+    </>
   );
 }

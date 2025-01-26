@@ -40,7 +40,7 @@ export default function Sidebar() {
   };
 
   return (
-    <nav className=" h-full bg-base-200 fixed top-0 left-0 w-1/3">
+    <nav className=" h-full bg-base-200 fixed top-0 left-0 w-1/3 bg-gradient-to-b from-[#2C3F6D] to-[#182848]">
       <div className="flex flex-col justify-between h-full p-4">
         <div>
           {/* profile */}

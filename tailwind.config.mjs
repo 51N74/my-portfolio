@@ -12,6 +12,11 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    animation: {
+      pulse: 'pulse 3s infinite',
+      'pulse-slow': 'pulse 5s infinite',
+      'pulse-fast': 'pulse 1.5s infinite',
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
