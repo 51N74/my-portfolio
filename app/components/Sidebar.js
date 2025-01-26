@@ -138,7 +138,7 @@ export default function Sidebar() {
                 />
               </Link>
 
-              <Link href="https://github.com/51N74" target="_blank">
+              <Link href="https://www.instagram.com/onewaaan" target="_blank">
                 <img
                   src="/icon_social/instagram.svg"
                   alt="Jiranat Pattanasintara"
@@ -146,7 +146,7 @@ export default function Sidebar() {
                 />
               </Link>
 
-              <Link href="https://github.com/51N74" target="_blank">
+              <Link href="https://www.linkedin.com/in/jiranat-pattanasintara-4b94ab348/" target="_blank">
                 <img
                   src="/icon_social/linkedin-white.svg"
                   alt="Jiranat Pattanasintara"
