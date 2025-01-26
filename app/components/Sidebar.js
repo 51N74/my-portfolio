@@ -4,11 +4,33 @@ import { useState, useEffect } from "react";
 export default function Sidebar() {
   const [activeSection, setActiveSection] = useState("");
   // Update the active section on scroll
+ 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["about", "experience", "projects"];
-      const scrollPosition = window.scrollY;
+    // Intersection Observer setup
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.7 } // Trigger when 70% of the section is visible
+    );
 
+    const sections = ["about", "experience", "projects"];
+
+    // Observe each section
+    sections.forEach((sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    // Scroll event listener
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -26,11 +48,13 @@ export default function Sidebar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Cleanup on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      observer.disconnect(); // Disconnect the observer when the component unmounts
     };
   }, []);
-
   // Handle menu click with smooth scrolling
   const handleMenuClick = (section) => {
     document.getElementById(section).scrollIntoView({
