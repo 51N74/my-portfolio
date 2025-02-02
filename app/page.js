@@ -42,27 +42,28 @@ export default function Home() {
       image:"projects/panstr.png",
       description:
         "Panstr is a web-based forum inspired by Thailand's popular platform, Pantip. It allows users to discuss various topics in a user-friendly interface. Built with Next.js and PostgreSQL, this project aims to eventually integrate the Nostr Protocol, creating a truly decentralized forum experience.",
-      link: "",
+      link: "https://panstr.vercel.app/",
     },
-    // {
-    //   name: "The Rice PanJa",
-    //   description:
-    //     "The Rice PanJa POS system is a web-based platform tailored for The Rice PanJa Restaurant. This system is designed to streamline restaurant operations while accommodating the unique requirements of a restaurant with guest rooms.",
-    //   link: "",
-    // },
+    {
+      name: "The Rice PanJa",
+      image:"projects/the-rice-panja.png",
+      description:
+        "The Rice PanJa POS system is a web-based platform tailored for The Rice PanJa Restaurant. This system is designed to streamline restaurant operations while accommodating the unique requirements of a restaurant with guest rooms.",
+      link: "https://the-rice-panja-pos.vercel.app/",
+    },
     {
       name: "E-commerce Showcase",
       image:"projects/sintara.png",
       description:
         "This project is a Coffee Beans Gallery web application designed to showcase various coffee bean products. The application features a user-friendly interface with a modern design, allowing users to browse through a selection of coffee beans, view details, and interact with a smooth carousel slider.",
-      link: "",
+      link: "https://sintaracoffee.vercel.app/",
     },
     {
       name: "FilmGallery",
       image:"projects/filmgallery.png",
       description:
         "FilmGallery is a web platform designed to showcase stunning photographs, primarily captured using film cameras. Users can explore and search for images based on the type of film, such as Kodak 200, to view photographs with a specific film aesthetic.",
-      link: "",
+      link: "https://esyen-film-gallery.vercel.app/",
     },
 
   ];
