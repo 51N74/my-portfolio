@@ -1,13 +1,13 @@
 export default function AboutMe() {
   return (
     <>
-    <p className="mt-4">
+    <p className="mt-4 text-white">
           I graduated from KMUTT with a degree in IT and have been working in
           the IT field for 2-3 years. My career began as a UX/UI Designer, where
           I designed websites using Figma based on client requirements. Although
           I enjoyed the creative process, I realized it wasn't my true passion.
         </p>
-        <p className="mt-4">
+        <p className="mt-4 text-white">
           During the COVID-19 pandemic, I pursued a different path by opening my
           own specialty coffee shop, "Alongdrip Coffee," in Khao Yai. This
           experience was transformative, teaching me invaluable skills in
@@ -15,7 +15,7 @@ export default function AboutMe() {
           roasting. It was a hands-on opportunity to manage a small business and
           create a unique customer experience.
         </p>
-        <p className="mt-4">
+        <p className="mt-4 text-white">
           After the pandemic, I returned to the IT field, starting with
           foundational skills in HTML, CSS, and JavaScript. I currently work as
           a WordPress Developer at an agency, where I focus on designing and
@@ -24,7 +24,7 @@ export default function AboutMe() {
           using PHP.
         </p>
 
-        <p className="mt-4">
+        <p className="mt-4 text-white">
           In addition to my professional work, I have diverse experience from
           previous roles. As a Film Developer and Sales Associate at a film
           camera shop, I provided customer support by recommending film and
@@ -33,7 +33,7 @@ export default function AboutMe() {
           management and task prioritization skills.
         </p>
 
-        <p className="mt-4">
+        <p className="mt-4 text-white">
           I am committed to continuous learning and personal growth. I am
           actively expanding my expertise in web development, focusing on both
           front-end and back-end technologies to advance as a Full-Stack

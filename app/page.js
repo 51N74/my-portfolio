@@ -83,7 +83,7 @@ export default function Home() {
         className="ml-48 min-h-screen flex flex-col justify-center mb-16"
       >
         <Experience workexperiences={workexperiences} />
-       <div className="mt-8 text-xl font-bold">
+       <div className="mt-8 text-xl font-bold text-white">
        <Link href="/Resume_P_Jiranat.pdf" passHref>
         View Resume
        </Link>

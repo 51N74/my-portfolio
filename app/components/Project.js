@@ -13,8 +13,8 @@ export default function Project({ projects }) {
           >
             <img src={project.image} alt={project.name} className="w-64 h-32" />
             <div className="ml-8">
-              <h3 className="text-2xl font-bold">{project.name}</h3>
-              <p className="mt-2">{project.description}</p>
+              <h3 className="text-2xl font-bold text-white">{project.name}</h3>
+              <p className="mt-2 text-white">{project.description}</p>
             </div>
           </div>
         </Link>

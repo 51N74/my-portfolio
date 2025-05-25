@@ -64,14 +64,14 @@ export default function Sidebar() {
   };
 
   return (
-    <nav className=" h-full bg-base-200 fixed top-0 left-0 w-1/3 bg-gradient-to-b from-[#2C3F6D] to-[#182848]">
+    <nav className=" h-full bg-base-200 fixed top-0 left-0 w-1/5 bg-gradient-to-b from-[#2C3F6D] to-[#182848]">
       <div className="flex flex-col justify-between h-full p-4">
         <div>
           {/* profile */}
           <div className="m-6 space-y-2 mb-16">
-            <h1 className="text-3xl font-bold">Jiranat Pattanasintara</h1>
-            <h4 className="text-xl font-bold">Web Developer</h4>
-            <p className="text-l">
+            <h1 className="text-3xl font-bold text-white">Jiranat Pattanasintara</h1>
+            <h4 className="text-xl font-bold text-white">Web Developer</h4>
+            <p className="text-l text-white">
               Full-time WordPress Developer with experience in front-end and
               full-stack development currently exploring Next.js. Skilled in
               time management and prioritizing
