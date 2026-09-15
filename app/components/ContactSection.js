@@ -27,22 +27,22 @@ export default function ContactSection() {
         </svg>
       ),
       label: "LinkedIn",
-      value: "linkedin.com/in/jiranat-pattanasintara",
+      value: "linkedin.com/in/jiranat-pattanasintara-4b94ab348",
       action: "https://www.linkedin.com/in/jiranat-pattanasintara-4b94ab348/"
     }
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Let's Work <span className="text-gradient">Together</span>
+              Let's Build Something Useful
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready to bring your web development project to life? I'm currently available for freelance projects
-              and full-time opportunities. Let's discuss how I can help solve your business challenges.
+              I'm currently open to Full-Time Developer opportunities and selected freelance projects.
+              If you're hiring, building a product, or have a technical problem you'd like to discuss, I'd be happy to hear from you.
             </p>
           </div>
 
@@ -54,14 +54,14 @@ export default function ContactSection() {
                 href={method.action}
                 target={method.action.startsWith('http') ? '_blank' : '_self'}
                 rel={method.action.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="card p-6 hover:shadow-xl transition-all duration-300 group"
+                className="bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300 group"
               >
                 <div className="flex flex-col items-center space-y-3">
-                  <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-gray-50 text-gray-700 rounded-full flex items-center justify-center group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
                     {method.icon}
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900">{method.label}</div>
+                    <div className="font-bold text-gray-900">{method.label}</div>
                     <div className="text-sm text-gray-600 mt-1">{method.value}</div>
                   </div>
                 </div>
@@ -69,36 +69,21 @@ export default function ContactSection() {
             ))}
           </div>
 
-          {/* Call to Action */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 mt-12">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900">Start Your Project Today</h3>
-              <p className="text-gray-600">
-                Whether you need a custom website, web application, or have a technical challenge to solve,
-                I'm here to help. My response time is typically within 24 hours.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a
-                  href="mailto:jiranat@example.com"
-                  className="btn-primary"
-                >
-                  Send Email
-                </a>
-                <a
-                  href="/Resume_P_Jiranat.pdf"
-                  download
-                  className="btn-secondary"
-                >
-                  Download Resume
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Availability Status */}
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-700 px-4 py-2 rounded-full">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium">Currently Available for Projects</span>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <a
+              href="mailto:jptns@proton.me"
+              className="btn-primary"
+            >
+              Send Email
+            </a>
+            <a
+              href="/Jiranat-Pattanasintara-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex justify-center items-center"
+            >
+              View Resume
+            </a>
           </div>
         </div>
       </div>

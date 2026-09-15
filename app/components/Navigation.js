@@ -18,6 +18,7 @@ export default function Navigation() {
   const navigationItems = [
     { label: 'Home', href: '#home' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#experience' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -64,12 +65,14 @@ export default function Navigation() {
 
           {/* Contact CTA */}
           <div className="hidden md:block">
-            <button
-              onClick={() => handleNavClick('#contact')}
+            <a
+              href="/Jiranat-Pattanasintara-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
             >
-              Get In Touch
-            </button>
+              View Resume
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -104,12 +107,14 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
-              <button
-                onClick={() => handleNavClick('#contact')}
+              <a
+                href="/Jiranat-Pattanasintara-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-base font-medium text-blue-600 hover:bg-gray-50 rounded-md"
               >
-                Get In Touch
-              </button>
+                View Resume
+              </a>
             </div>
           </div>
         )}

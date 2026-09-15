@@ -7,12 +7,12 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Jiranat Pattanasintara - Full-Stack Web Developer",
-  description: "Professional full-stack web developer specializing in React, Next.js, WordPress, and custom web solutions. Building digital experiences that drive results for businesses.",
-  keywords: "web developer, full-stack developer, React, Next.js, WordPress, JavaScript, portfolio, freelance developer",
+  title: "Jiranat Pattanasintara | Full-Stack Developer",
+  description: "Full-Stack Developer based in Thailand building web applications, data-driven systems, decentralized applications, and software products.",
+  keywords: "web developer, full-stack developer, React, Next.js, WordPress, JavaScript, portfolio",
   openGraph: {
-    title: "Jiranat Pattanasintara - Web Developer",
-    description: "Professional full-stack web developer creating custom web solutions",
+    title: "Jiranat Pattanasintara | Full-Stack Developer",
+    description: "Full-Stack Developer based in Thailand building web applications, data-driven systems, decentralized applications, and software products.",
     type: "website",
   },
 };
