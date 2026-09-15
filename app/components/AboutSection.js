@@ -35,7 +35,7 @@ export default function AboutSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             About <span className="text-gradient">Me</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Passionate web developer with a diverse background bringing technical expertise
             and business acumen to every project.
           </p>
@@ -46,7 +46,7 @@ export default function AboutSection() {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Journey</h3>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   I'm a results-driven Web Developer with a degree in IT from KMUTT and 2-3 years of experience
                   in creating digital solutions that solve real business problems. My journey began in UX/UI design,

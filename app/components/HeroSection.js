@@ -16,10 +16,10 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Full-Stack Developer Building Real-World Web Applications
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mobile-readable">
+              <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mobile-readable">
                 I build and ship web applications across the stack — from frontend interfaces and APIs to data-driven systems, decentralized applications, and production deployments.
               </p>
-              <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto lg:mx-0">
                 Currently focused on Next.js, React, Node.js, APIs, data-driven systems, and modern web application architecture.
               </p>
             </div>

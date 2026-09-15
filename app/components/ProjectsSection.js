@@ -20,10 +20,8 @@ export default function ProjectsSection() {
     },
     {
       name: "HomeKitchen",
-      image: "/projects/homekitchen.png",
       description: "HomeKitchen is a frontend product prototype designed around the operational constraints of small home kitchens. Conventional food-delivery platforms often assume that kitchens can continue accepting orders. HomeKitchen explores a workflow where kitchen capacity is treated as a first-class constraint.",
       tech: ["React", "Frontend Prototype", "Product Concept"],
-      link: "#",
       github: "https://github.com/51N74/homekitchen-app"
     }
   ];
@@ -33,15 +31,13 @@ export default function ProjectsSection() {
       name: "Sintara Coffee Gallery",
       description: "A modern showcase web application for coffee beans gallery.",
       tech: ["React", "CSS3", "JavaScript"],
-      link: "https://sintaracoffee.vercel.app/",
-      github: "https://github.com/51N74"
+      link: "https://sintaracoffee.vercel.app/"
     },
     {
       name: "FilmGallery",
       description: "A specialized web platform for showcasing film photography.",
       tech: ["Next.js", "Gallery Component"],
-      link: "https://esyen-film-gallery.vercel.app/",
-      github: "https://github.com/51N74"
+      link: "https://esyen-film-gallery.vercel.app/"
     }
   ];
 
@@ -60,34 +56,27 @@ export default function ProjectsSection() {
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-start">
-                <div className="space-y-6">
+                
+                {/* Left Column: What I Built & Demo */}
+                <div className="space-y-8">
                   <div>
                     <h3 className="text-3xl font-bold text-gray-900">VextaCore</h3>
                     <p className="text-lg text-blue-600 font-medium mt-1">Quantitative Football Analytics Platform</p>
                   </div>
                   
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    VextaCore is a quantitative research platform for football that compares mathematical probability models with market odds to identify where the numbers disagree.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-gray-900">Project Details:</h4>
-                    <ul className="list-disc list-inside text-gray-600 space-y-2 ml-2">
-                      <li>Bivariate Poisson & Dixon-Coles probability modelling</li>
-                      <li>Market odds and implied probability analysis</li>
-                      <li>Expected Value (EV) / Edge calculation</li>
-                      <li>Automated market signal scanning</li>
-                      <li>Football statistics data pipeline</li>
-                      <li>Match simulation and scenario analysis</li>
-                      <li>Sensitivity analysis</li>
-                      <li>API-driven application architecture</li>
-                      <li>Data integrity and temporal validation</li>
-                    </ul>
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">What I Built</h4>
+                    <p className="text-gray-600 text-xl leading-relaxed">
+                      VextaCore is a quantitative football analytics and research platform. It combines statistical modelling and market data to help users identify where model estimates and market prices diverge. 
+                    </p>
+                    <p className="text-gray-600 text-xl leading-relaxed mt-3">
+                      The platform includes research, simulation, and market-signal workflows, and runs as a production web application.
+                    </p>
                   </div>
 
                   <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
                     <p className="text-sm text-gray-800">
-                      <strong>My Role:</strong> Product planning · System architecture · Frontend · Backend integration · Data pipeline · Quantitative logic · Testing · Deployment
+                      <strong>My Role:</strong> Application architecture · Frontend development · Backend & API integration · External data integration · Automated data processing · Quantitative modelling integration
                     </p>
                     <p className="text-sm text-gray-800 mt-2">
                       <strong>Status:</strong> Live production application
@@ -95,50 +84,51 @@ export default function ProjectsSection() {
                   </div>
                   
                   <div>
-                    <a href="#vextacore-case-study" className="btn-primary inline-block">
-                      View Case Study
+                    <a href="https://vextacore.app/" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+                      Live Demo
                     </a>
                   </div>
                 </div>
                 
-                {/* Technical Case Study Side */}
-                <div id="vextacore-case-study" className="lg:border-l lg:border-gray-100 lg:pl-12 space-y-8">
+                {/* Right Column: Why It Matters & What I Engineered */}
+                <div className="lg:border-l lg:border-gray-100 lg:pl-12 space-y-8">
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Technical Approach</h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      VextaCore combines statistical modelling with market data. The probability engine uses Bivariate Poisson and Dixon-Coles methods to estimate match outcome probabilities.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed mt-3">
-                      Market odds are converted into implied probabilities and compared with model probabilities. The system uses the resulting divergence to calculate potential Expected Value and surface quantitative signals.
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Why It Matters</h4>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      VextaCore was built around a simple question: what happens when a mathematical model and the market disagree? The platform turns multiple sources of data into a streamlined workflow for researching those differences.
                     </p>
                   </div>
                   
                   <div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">Engineering Challenges</h4>
-                    <ul className="space-y-3">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">What I Actually Engineered</h4>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                      I independently designed the system, integrated multiple data sources, built the application, handled difficult data issues, and deployed it as a working product.
+                    </p>
+                    <ul className="space-y-4">
                       <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span className="text-gray-600">Integrating external data sources and scheduled data updates reliably.</span>
+                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                        <span className="text-gray-600 text-lg"><strong>System Architecture:</strong> Engineered an API-driven frontend and backend architecture to serve complex analytical workflows.</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span className="text-gray-600">Handling market odds and probability calculations accurately.</span>
+                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                        <span className="text-gray-600 text-lg"><strong>Data Integration:</strong> Designed data pipelines that combine external statistics with market data.</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span className="text-gray-600">Managing stale data and complex competition/team mappings.</span>
+                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                        <span className="text-gray-600 text-lg"><strong>Data Integrity:</strong> Built validation mechanisms to reduce issues caused by stale or inconsistent external data.</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span className="text-gray-600">Differentiating between pre-match vs in-play data.</span>
+                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                        <span className="text-gray-600 text-lg"><strong>Quantitative Systems:</strong> Integrated statistical models and simulation features into a fast, responsive user interface.</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-600 mr-2">•</span>
-                        <span className="text-gray-600">Ensuring strict data validation and temporal integrity throughout the pipeline.</span>
+                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                        <span className="text-gray-600 text-lg"><strong>Production Engineering:</strong> Handled scheduled processing, testing, and production deployment.</span>
                       </li>
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

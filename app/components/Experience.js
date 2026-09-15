@@ -56,7 +56,7 @@ export default function Experience() {
                 </div>
               </div>
               
-              <div className="text-gray-600 leading-relaxed text-lg mb-6">
+              <div className="text-gray-600 leading-relaxed text-xl mb-6">
                 {exp.description}
               </div>
 
