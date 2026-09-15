@@ -77,7 +77,7 @@ export default function ContactSection() {
               Send Email
             </a>
             <a
-              href="/Jiranat-Pattanasintara-Resume.pdf"
+              href="/Jiranat-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex justify-center items-center"

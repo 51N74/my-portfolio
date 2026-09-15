@@ -33,7 +33,7 @@ export default function HeroSection() {
                 View My Projects
               </button>
               <a
-                href="/Jiranat-Pattanasintara-Resume.pdf"
+                href="/Jiranat-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-lg px-8 py-4 touch-target inline-flex justify-center items-center"

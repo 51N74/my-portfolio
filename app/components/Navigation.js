@@ -66,7 +66,7 @@ export default function Navigation() {
           {/* Contact CTA */}
           <div className="hidden md:block">
             <a
-              href="/Jiranat-Pattanasintara-Resume.pdf"
+              href="/Jiranat-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -108,7 +108,7 @@ export default function Navigation() {
                 </button>
               ))}
               <a
-                href="/Jiranat-Pattanasintara-Resume.pdf"
+                href="/Jiranat-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-base font-medium text-blue-600 hover:bg-gray-50 rounded-md"
