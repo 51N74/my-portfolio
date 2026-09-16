@@ -21,7 +21,7 @@ export default function ProjectCard({ project }) {
           <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(#d1d5db 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
           <div className="relative z-10 space-y-1">
             <h4 className="text-gray-800 font-bold text-xl">{project.name}</h4>
-            <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Frontend Product Prototype</p>
+            <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">{project.role || "Project"}</p>
           </div>
         </div>
       )}

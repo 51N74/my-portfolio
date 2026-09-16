@@ -3,41 +3,43 @@ import ProjectCard from './ProjectCard';
 export default function ProjectsSection() {
   const selectedProjects = [
     {
-      name: "Panstr",
+      name: "Web Event Log Hub MVP",
+      role: "Full-Stack Engineering",
+      description: "Demonstrates full-stack application development, including frontend, backend API, authentication, and data handling. Showcases production-oriented engineering prioritizing robust architecture.",
+      tech: ["Full-Stack Engineering", "Frontend", "Backend API", "Authentication"],
+      github: "https://github.com/51N74/web-event-log-hub-mvp"
+    },
+    {
+      name: "Panstr Webboard",
+      role: "Architecture / Decentralized Systems",
       image: "/projects/panstr.png",
-      description: "Panstr is a forum-style social platform inspired by traditional discussion boards, but built around the Nostr protocol instead of a conventional centralized backend. Panstr does not use its own database. Instead, the application connects directly to external Nostr relays and uses the Nostr protocol as its data layer.",
-      tech: ["Next.js", "Nostr Protocol", "Tailwind CSS", "Vercel"],
+      description: "An unconventional architecture built around decentralized infrastructure. Features Nostr authentication and external Nostr relays as a data layer for forum functionality with robust client-side filtering.",
+      tech: ["Architecture", "Nostr Protocol", "Next.js", "Decentralized Systems"],
       link: "https://panstr.vercel.app/",
       github: "https://github.com/51N74/panstr-webboard-forum"
     },
     {
-      name: "The Rice PanJa POS",
-      image: "/projects/the-rice-panja.png",
-      description: "A web-based point-of-sale system built for a resort restaurant. The existing system was slow and information did not synchronize effectively between front-of-house ordering and the kitchen. The system was completed and deployed, but the restaurant subsequently closed before the application could be adopted in production.",
-      tech: ["Next.js", "React", "Node.js", "Full-Stack Architecture"],
-      link: "https://the-rice-panja-pos.vercel.app/",
-      github: "https://github.com/51N74/POS-The-Rice-Panja"
-    },
-    {
       name: "HomeKitchen",
-      description: "HomeKitchen is a frontend product prototype designed around the operational constraints of small home kitchens. Conventional food-delivery platforms often assume that kitchens can continue accepting orders. HomeKitchen explores a workflow where kitchen capacity is treated as a first-class constraint.",
-      tech: ["React", "Frontend Prototype", "Product Concept"],
+      role: "Product Thinking / Frontend",
+      description: "Combines product-oriented implementation with frontend engineering. Structured using React 19, TypeScript, Vite, and TanStack Router, incorporating Tailwind CSS and external API integrations.",
+      tech: ["Product Thinking", "React 19", "TypeScript", "Vite", "Tailwind CSS"],
+      link: "https://homekitchen-app.vercel.app/",
       github: "https://github.com/51N74/homekitchen-app"
     }
   ];
 
   const otherProjects = [
     {
-      name: "Sintara Coffee Gallery",
-      description: "A modern showcase web application for coffee beans gallery.",
-      tech: ["React", "CSS3", "JavaScript"],
-      link: "https://sintaracoffee.vercel.app/"
+      name: "Rust Mole",
+      description: "A macOS system utility built in Rust. Demonstrates systems-level thinking with careful handling of filesystem operations, APFS snapshots, safety checks, symlink protection, and audit logging via a CLI interface.",
+      tech: ["Rust", "Systems", "CLI"],
+      github: "https://github.com/51N74/rust-mole"
     },
     {
-      name: "FilmGallery",
-      description: "A specialized web platform for showcasing film photography.",
-      tech: ["Next.js", "Gallery Component"],
-      link: "https://esyen-film-gallery.vercel.app/"
+      name: "Room Booking API Minimal",
+      description: "A backend service demonstrating architectural discipline. Developed with Rust, Axum, Diesel, and SQLite. Implements layered Clean Architecture concepts, JWT authentication, RBAC, and core booking logic.",
+      tech: ["Backend", "Rust", "Axum", "Clean Architecture", "API"],
+      github: "https://github.com/51N74/room-booking-api-minimal"
     }
   ];
 
@@ -160,8 +162,12 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-600 hover:underline">Live Demo</a>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:underline">GitHub</a>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-blue-600 hover:underline">Live Demo</a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-600 hover:underline">GitHub</a>
+                  )}
                 </div>
               </div>
             ))}

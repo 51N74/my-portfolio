@@ -18,7 +18,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/jiranat-pattanasintara-4b94ab348/"
+              href="https://www.linkedin.com/in/jiranat-pattanasintara"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"

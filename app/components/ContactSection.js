@@ -27,8 +27,8 @@ export default function ContactSection() {
         </svg>
       ),
       label: "LinkedIn",
-      value: "linkedin.com/in/jiranat-pattanasintara-4b94ab348",
-      action: "https://www.linkedin.com/in/jiranat-pattanasintara-4b94ab348/"
+      value: "linkedin.com/in/jiranat-pattanasintara",
+      action: "https://www.linkedin.com/in/jiranat-pattanasintara"
     }
   ];
 
