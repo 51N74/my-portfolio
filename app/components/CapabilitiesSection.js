@@ -1,46 +1,101 @@
-export default function CapabilitiesSection() {
-  const capabilities = [
-    {
-      title: "Full-Stack Development",
-      description: "Building web applications across frontend, backend APIs, data handling, and deployment."
-    },
-    {
-      title: "Frontend Engineering",
-      description: "React, Next.js, JavaScript, responsive interfaces, component architecture, and API integration."
-    },
-    {
-      title: "Backend & APIs",
-      description: "Node.js, REST APIs, server-side logic, database integration, and external service integration."
-    },
-    {
-      title: "Data & Systems",
-      description: "Data pipelines, probability models, filtering systems, scheduled processing, validation, and data-driven applications."
-    },
-    {
-      title: "Product Thinking",
-      description: "Translating real-world problems into software workflows, interfaces, and practical product concepts."
-    }
-  ];
+const capabilities = [
+  {
+    title: "Build across the stack",
+    description:
+      "Frontend interfaces, backend APIs, data handling, and deployment brought together in working applications.",
+    href: "#unpause",
+    evidence: "Unpause: React, Go, and PostgreSQL",
+  },
+  {
+    title: "Work with complex data",
+    description:
+      "External data integration, validation, probability models, filtering, and scheduled processing.",
+    href: "#vextacore",
+    evidence: "VextaCore: data into research workflows",
+  },
+  {
+    title: "Choose the architecture",
+    description:
+      "Component architecture, API integration, and data-layer decisions shaped by the problem.",
+    href: "#panstr",
+    evidence: "Panstr: Nostr relays as the data layer",
+  },
+  {
+    title: "Think through the product",
+    description:
+      "Translate real-world constraints into practical software workflows and responsive interfaces.",
+    href: "#homekitchen",
+    evidence: "HomeKitchen: capacity before orders",
+  },
+];
 
+const skills = [
+  {
+    category: "Frontend",
+    items: "React, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS",
+  },
+  {
+    category: "Backend & data",
+    items: "Node.js, Go, Gin, REST APIs, PostgreSQL, MongoDB",
+  },
+  {
+    category: "CMS & web delivery",
+    items: "WordPress, PHP, responsive design, SEO, performance optimization",
+  },
+  {
+    category: "Tools & deployment",
+    items: "Git, Figma, Vercel, Docker, Render",
+  },
+];
+
+export default function CapabilitiesSection() {
   return (
-    <section id="capabilities" className="py-24 bg-white">
-      <div className="container">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            What I Build
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            My engineering capabilities span across the entire stack, focusing on building robust, scalable, and user-centric applications.
+    <section
+      id="capabilities"
+      className="section capabilities-section"
+      aria-labelledby="capabilities-title"
+    >
+      <div className="shell">
+        <div className="section-heading">
+          <div>
+            <p className="section-context">Technical capabilities</p>
+            <h2 id="capabilities-title">Skills you can trace to the work.</h2>
+          </div>
+          <p>
+            From responsive interfaces to backend business rules. Each
+            capability has a project behind it.
           </p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {capabilities.map((cap, index) => (
-            <div key={index} className="p-6 bg-gray-50 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{cap.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{cap.description}</p>
-            </div>
-          ))}
+        <div className="capabilities-layout">
+          <div className="capability-evidence-list">
+            {capabilities.map((capability) => (
+              <article className="capability-evidence" key={capability.title}>
+                <h3>{capability.title}</h3>
+                <p>{capability.description}</p>
+                <a href={capability.href} className="text-link">
+                  {capability.evidence} <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+          <aside className="skills-inventory" aria-labelledby="skills-title">
+            <h3 id="skills-title">My toolkit</h3>
+            <dl>
+              {skills.map((skill) => (
+                <div key={skill.category}>
+                  <dt>{skill.category}</dt>
+                  <dd>{skill.items}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="skills-note">
+              Professional WordPress development at Sunnysideup Studio,
+              alongside independent full-stack projects.
+            </p>
+            <a href="#experience" className="text-link">
+              View my experience <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
         </div>
       </div>
     </section>

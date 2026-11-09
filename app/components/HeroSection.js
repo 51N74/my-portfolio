@@ -1,68 +1,116 @@
-"use client";
-
 export default function HeroSection() {
-  const handleScrollToProjects = (e) => {
-    e.preventDefault();
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-white pt-20">
-      <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Hero Content */}
-          <div className="text-center lg:text-left space-y-8 order-2 lg:order-1">
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Full-Stack Developer Building Real-World Web Applications
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mobile-readable">
-                I build and ship web applications across the stack — from frontend interfaces and APIs to data-driven systems, decentralized applications, and production deployments.
-              </p>
-              <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto lg:mx-0">
-                Currently focused on Next.js, React, Node.js, APIs, data-driven systems, and modern web application architecture.
-              </p>
-            </div>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={handleScrollToProjects}
-                className="btn-primary text-lg px-8 py-4 touch-target"
-              >
-                View My Projects
-              </button>
+    <section id="home" className="hero">
+      <div className="shell">
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <p className="hero-introduction">
+              Full-stack developer based in Thailand
+            </p>
+            <h1>Software built around real problems.</h1>
+            <p className="hero-description">
+              I’m Jiranat Pattanasintara. I build web applications across the
+              stack, connecting thoughtful interfaces, backend APIs, and
+              data-driven systems.
+            </p>
+            <div className="button-group">
+              <a href="#projects" className="button button-primary">
+                Explore my projects
+              </a>
               <a
-                href="/resume/Jiranat-Pattansintara-Full-Stack-Developer-Resume.pdf"
+                href="/Jiranat_Pattanasintara_Full_Stack_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary text-lg px-8 py-4 touch-target inline-flex justify-center items-center"
+                className="button button-secondary"
               >
-                View Resume
+                View resume
               </a>
             </div>
+            <p className="hero-availability">
+              <span aria-hidden="true" />
+              Open to full-time developer opportunities
+            </p>
           </div>
-
-          {/* Hero Visual */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="w-full max-w-md p-8 bg-gray-50 rounded-xl border border-gray-200 font-mono text-sm sm:text-base text-gray-700 shadow-sm">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+          <aside
+            className="system-preview"
+            aria-label="VextaCore project capabilities"
+          >
+            <div className="system-preview-heading">
+              <div>
+                <p className="project-context">Inside a project</p>
+                <h2>VextaCore</h2>
               </div>
-              <div className="space-y-2">
-                <p><span className="text-blue-600">const</span> developer = {'{'}</p>
-                <p className="pl-4">name: <span className="text-green-600">'Jiranat Pattanasintara'</span>,</p>
-                <p className="pl-4">role: <span className="text-green-600">'Full-Stack Developer'</span>,</p>
-                <p className="pl-4">location: <span className="text-green-600">'Thailand'</span>,</p>
-                <p className="pl-4">skills: [<span className="text-green-600">'Next.js'</span>, <span className="text-green-600">'React'</span>, <span className="text-green-600">'Node.js'</span>]</p>
-                <p>{'};'}</p>
-                <br />
-                <p><span className="text-blue-600">developer</span>.build(<span className="text-green-600">'scalable applications'</span>);</p>
+              <span className="status-tag">In production</span>
+            </div>
+            <p className="system-preview-description">
+              Turning football statistics and market data into research
+              workflows.
+            </p>
+            <div className="capability-map">
+              <div className="capability-node">
+                <span className="node-symbol" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <ellipse cx="12" cy="5" rx="7" ry="3" />
+                    <path d="M5 5v7c0 4 14 4 14 0V5M5 12v7c0 4 14 4 14 0v-7" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>Connect the data</h3>
+                  <p>External statistics and market sources</p>
+                </div>
+              </div>
+              <div className="capability-node">
+                <span className="node-symbol" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="m8 4-6 8 6 8m8-16 6 8-6 8M14 3l-4 18" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>Engineer the system</h3>
+                  <p>Validation, models, scheduled processing</p>
+                </div>
+              </div>
+              <div className="capability-node">
+                <span className="node-symbol" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M3 9h18m-12 0v11m4-4 2-3 2 1 2-3" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>Make it useful</h3>
+                  <p>Research, simulation, market signals</p>
+                </div>
               </div>
             </div>
-          </div>
+            <a className="text-link" href="#vextacore">
+              Explore the engineering <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
+        </div>
+        <div className="hero-summary">
+          <p>From interface to deployment</p>
+          <ul aria-label="Core technologies">
+            <li>React & Next.js</li>
+            <li>Node.js & APIs</li>
+            <li>Go & PostgreSQL</li>
+            <li>WordPress & PHP</li>
+          </ul>
         </div>
       </div>
     </section>
