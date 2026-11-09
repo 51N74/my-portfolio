@@ -1,75 +1,74 @@
-import Link from 'next/link';
-
 export default function ProjectCard({ project }) {
   return (
-    <div className="card overflow-hidden group hover:translate-y-[-4px] transition-all duration-300">
+    <article
+      id={project.id}
+      className="project-card"
+      aria-labelledby={`${project.id}-title`}
+    >
       {project.image ? (
-        <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200">
+        <div className="project-image">
           <img
             src={project.image}
-            alt={project.name}
-            className="w-full h-full object-cover"
+            alt={project.imageAlt}
+            width={1308}
+            height={816}
+            loading="lazy"
+            decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-            <div className="p-4 text-white">
-              <p className="text-sm">View Live Project →</p>
-            </div>
-          </div>
         </div>
       ) : (
-        <div className="relative h-48 bg-gray-50 border-b border-gray-100 flex flex-col items-center justify-center p-6 text-center overflow-hidden group-hover:bg-gray-100 transition-colors duration-300">
-          <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(#d1d5db 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
-          <div className="relative z-10 space-y-1">
-            <h4 className="text-gray-800 font-bold text-xl">{project.name}</h4>
-            <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider">Frontend Product Prototype</p>
+        <div
+          className="prototype-visual"
+          role="img"
+          aria-label="HomeKitchen concept linking kitchen capacity with the order workflow"
+        >
+          <span>HomeKitchen</span>
+          <div className="prototype-constraint">
+            <span>Kitchen capacity</span>
+            <span>Order workflow</span>
           </div>
+          <p>Designing around the limits of a home kitchen.</p>
         </div>
       )}
-
-      <div className="p-6 space-y-4">
-        <div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{project.name}</h3>
-          <p className="text-gray-600 text-lg leading-relaxed">{project.description}</p>
+      <div className="project-card-body">
+        <p className="project-context">{project.category}</p>
+        <h3 id={`${project.id}-title`}>{project.name}</h3>
+        <p>{project.description}</p>
+        <div className="project-decision">
+          <h4>{project.evidenceTitle}</h4>
+          <p>{project.evidence}</p>
         </div>
-
-        {/* Technical Stack */}
-        {project.tech && (
-          <div className="flex flex-wrap gap-2">
-            {project.tech.map((tech, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-blue-50 text-blue-700 text-sm font-medium rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* Project Links */}
-        <div className="flex gap-4 pt-4 border-t border-gray-100">
+        <ul
+          className="technology-list"
+          aria-label={`${project.name} technologies and focus`}
+        >
+          {project.tech.map((tech) => (
+            <li key={tech}>{tech}</li>
+          ))}
+        </ul>
+        <div className="project-links">
           {project.link && (
-            <Link
+            <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+              aria-label={`Visit ${project.name}`}
             >
-              View Live Demo →
-            </Link>
+              Visit project <span aria-hidden="true">↗</span>
+            </a>
           )}
           {project.github && (
-            <Link
+            <a
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-gray-600 hover:text-gray-700 transition-colors"
+              aria-label={`View ${project.name} source code`}
             >
-              View Code →
-            </Link>
+              Source code <span aria-hidden="true">↗</span>
+            </a>
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
